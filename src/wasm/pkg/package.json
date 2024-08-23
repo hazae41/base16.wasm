@@ -1,0 +1,24 @@
+{
+  "name": "base16_wasm",
+  "type": "module",
+  "collaborators": [
+    "hazae41 <4405263+hazae41@users.noreply.github.com>"
+  ],
+  "description": "WebAssembly port of Base16",
+  "version": "1.0.0",
+  "license": "Unlicense",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hazae41/base16.wasm"
+  },
+  "files": [
+    "base16_wasm_bg.wasm",
+    "base16_wasm.js",
+    "base16_wasm.d.ts"
+  ],
+  "main": "base16_wasm.js",
+  "types": "base16_wasm.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
