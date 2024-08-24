@@ -16,6 +16,9 @@ npm i @hazae41/base16.wasm
 ## Modules
 - base16ct
 
+## Algorithms
+- Base16
+
 ## Usage
 
 ```typescript
