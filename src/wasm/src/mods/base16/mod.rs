@@ -2,7 +2,7 @@ use wasm_bindgen::prelude::*;
 
 use memory_wasm::Memory;
 
-use crate::rjse;
+use crate::libs::jse::rjse;
 
 #[wasm_bindgen]
 pub fn base16_encode_lower(bytes: &Memory) -> String {
