@@ -1,7 +1,3 @@
-extern crate alloc;
-
-use alloc::string::String;
-
 use wasm_bindgen::prelude::*;
 
 use memory_wasm::Memory;
