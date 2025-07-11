@@ -6,6 +6,8 @@ use wasm_bindgen::prelude::*;
 
 use memory_wasm::Memory;
 
+use crate::rjse;
+
 #[wasm_bindgen]
 pub fn base16_encode_lower(bytes: &Memory) -> String {
     base16ct::lower::encode_string(&bytes.inner)
@@ -18,21 +20,15 @@ pub fn base16_encode_upper(bytes: &Memory) -> String {
 
 #[wasm_bindgen]
 pub fn base16_decode_mixed(text: &str) -> Result<Memory, JsError> {
-    base16ct::mixed::decode_vec(text)
-        .map(Memory::new)
-        .map_err(|_| JsError::new("base16_decode_mixed"))
+    rjse!(base16ct::mixed::decode_vec(text).map(Memory::new))
 }
 
 #[wasm_bindgen]
 pub fn base16_decode_lower(text: &str) -> Result<Memory, JsError> {
-    base16ct::lower::decode_vec(text)
-        .map(Memory::new)
-        .map_err(|_| JsError::new("base16_decode_lower"))
+    rjse!(base16ct::lower::decode_vec(text).map(Memory::new))
 }
 
 #[wasm_bindgen]
 pub fn base16_decode_upper(text: &str) -> Result<Memory, JsError> {
-    base16ct::upper::decode_vec(text)
-        .map(Memory::new)
-        .map_err(|_| JsError::new("base16_decode_upper"))
+    rjse!(base16ct::upper::decode_vec(text).map(Memory::new))
 }
