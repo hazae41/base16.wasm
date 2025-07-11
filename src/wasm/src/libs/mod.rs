@@ -1,1 +1,1 @@
-pub mod jse;
+pub(crate) mod jse;
