@@ -1,4 +1,4 @@
-# base16.wasm
+# base16.wasm ([deprecated](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array/toHex))
 
 WebAssembly port of Base16
 
